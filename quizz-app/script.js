@@ -5,7 +5,7 @@ const questions=[
         'b':'css',
         'c':'javascript',
         'd':'all of the above',
-        'correct':'a',
+        'cor':"a"
         },
         {
             'que':'what year was javascript lanched?',
@@ -13,7 +13,7 @@ const questions=[
             'b':'1996',
             'c':'1997',
             'd':'1998',
-            'correct':'a',
+            'cor':"c"
         },
         {
             'que':'which of the following is a programming language?',
@@ -21,7 +21,7 @@ const questions=[
             'b':'css',
             'c':'javascript',
             'd':'none of the above',
-            'correct':'d',
+            'cor':"d"
 
         },
         {
@@ -30,45 +30,74 @@ const questions=[
         'b':'css',
         'c':'javascript',
         'd':'none of the above',
-        'correct':'c',
+        'cor':"c"
 
         },
 
 ]
 
 let index=0
+let right=0,wrong=0,total=questions.length;
 let quebox=document.getElementById("question")
-let choice=document.querySelectorAll('.option')
+let optionInputs=document.querySelectorAll('.option')
 const loadQuestion=() =>{
-    let data=questions[index]
-quebox.innerHTML=`${index+1}) ${data.que}`;
-choice[0].nextElementSibling.innerHTML=data.a
-choice[1].nextElementSibling.innerHTML=data.b
-choice[2].nextElementSibling.innerHTML=data.c
-choice[3].nextElementSibling.innerHTML=data.d
-}
-const  submitquiz=()=>{
-   getanswer();
+    const data=questions[index]
+    if(index===total){
+        endQuiz();
+    }
+    
+        reset();
+    
+quebox.innerHTML=`${index+1}) ${data.que}`; 
+optionInputs[0].nextElementSibling.innerHTML=data.a 
+optionInputs[1].nextElementSibling.innerHTML=data.b 
+optionInputs[2].nextElementSibling.innerHTML=data.c 
+optionInputs[3].nextElementSibling.innerHTML=data.d
 }
 
-loadQuestion();
+const submitquiz=()=>{
+    let answer=getanswer();
+    if(answer===questions[index].cor){
+        right++
+    }
+    else{
+        wrong++
+    }
+    index++
+    if(index<questions.length){
+        loadQuestion()}
+        return;
+   
+}
+
 const getanswer=()=>{
     let answer
-    for(let i=0;i<choice.length;i++){
-        if(choice[i].checked){
-            answer=choice[i].value
-            console.log(answer)
+ optionInputs.forEach((input)=>{
+        if(input.checked){
+            console.log(input.value)
+           answer= input.value
         }
-    }
-    }
-    const checkanswer=()=>{
-        choice.forEach(()=>{
-            if(.checked){
-                console.log("yes")        
-             }else{
-                console.log("no")
-             }
+            
 
-        })
+    })
+    return answer
+}
+const reset=()=>{
+ optionInputs.forEach((input)=>{
+        input.checked=false
+    })
+}
+const endQuiz=()=>{
+    document.getElementsByClassName(".box").innerHTML=
+    `<h1>thank for playing </h1>
+    <h3>${right} out of ${total} are correct.</h3>
+    `
 
-    }
+
+
+} 
+
+
+//initial call
+loadQuestion();
+
