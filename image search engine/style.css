@@ -1,0 +1,45 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;;
+}
+
+body{
+    background-color: rgba(2, 2, 151, 0.631);
+    color: #fff;
+}
+h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin: 100px auto 50px;
+    text-transform: capitalize;
+}
+form{
+    width:90%;
+    max-width: 600PX;
+    margin: auto;
+    height: 80px;
+    background: #434989;
+    display: flex;
+    align-items: center;
+}
+form input{
+    flex:1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0 30px;
+    font-size: 18px;
+    background: transparent;
+    color: #fff; 
+}
+form button{
+    
+
+}
