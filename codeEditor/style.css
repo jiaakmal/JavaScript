@@ -1,0 +1,14 @@
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: blanchedalmond;
+    display: flex;
+}
+.left-part{
+    flex-basis: 50%;
+    background-color:#fff;
+}
+.right-part{
+    flex-basis: 50%;
+    background-color:#000;
+}
