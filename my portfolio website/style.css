@@ -97,11 +97,14 @@ p{
 .bg-light-grey{
     background: var(--secondry-grey);
 }
-.fil-white{
+.fill-white{
     color: var(--white);
 }
 .fill-light-pink{
     color: var(--secondry-pink);
+}
+.fill-pink{
+    color: var(--primary-pink);
 }
 .section{
     padding: 6rem 0;
@@ -148,7 +151,7 @@ img{
     justify-content: space-between;
     align-items: center;
     height: 13vh;
-
+    padding: 0 2rem;
     width: 80%;
     margin: auto;
 }
@@ -212,15 +215,108 @@ img{
 
 /*---skill-sectionstyling-----*/
 
-.skill-level{
+.level-container{
     width: 100%;
     height: .7rem;
     background: var(--white);
+    margin-top: .7rem;
+    border-radius: 3rem;
+    position: relative;
+    
 }
-.skill-bar-container{
+.skill-container{
     width: 100%;
     display: grid;
+    grid-template-columns: repeat(2,1fr);
     grid-column-gap: 6rem;
     grid-row-gap:2rem ;
 
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+.skill-bar{
+    background:var(--primary-pink);
+    position: absolute;
+    inset: 0;
+    border-radius: 3rem;
+}
+.html{
+width: 80%;
+}
+.css{
+    width: 70%;
+}
+.javascript{
+    width: 66%;
+}
+.TailWind{
+    width: 50%;
+}
+.react{
+    width: 40%;
+}
+/* ----skill section end---- */
+
+
+/* ----About Me styling-----  */
+
+[data-type="inverted-img"]{
+    transform: scaleX(-1);
+
+}
+.detail{
+    margin-bottom: 1.6rem ;
+}
+.interest{
+    display: flex;
+    gap: 2rem;
+}
+
+/* ----About Me styling end-----  */
+
+
+/* ------srvices section styling------- */
+.grid-card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-row-gap: 3.5rem;
+    grid-column-gap:2rem ;
+}
+.card{
+    background: var(--white);
+    padding: 1rem 0 0 2rem;
+    text-align: left;
+    border-radius: 0 40% 0 0;
+}
+[data-type="card-icon"]{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background:var(--primary-pink);
+    border-radius: 5rem;
+
+}
+.card:hover{
+    background: var(--primary-pink);
+    cursor: pointer;
+}
+.card:hover.card p,.card:hover.card h4{
+    color: var(--white);
+}
+.card:hover [data-type="card-icon"]{
+    background: var(--white);
+    color: var(--primary-pink);
+}
+
+/* ------srvices section styling end------- */
+
+/*------portfolio section styling-------*/
+
+.portfolio-card{
+    width: 20rem;
+    height: 12rem;
+    background-color: var(--primary-pink);
 }
