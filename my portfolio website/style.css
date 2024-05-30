@@ -319,4 +319,32 @@ width: 80%;
     width: 20rem;
     height: 12rem;
     background-color: var(--primary-pink);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
+.portfolio-card:nth-child(1){
+    background-image: url(../images/portfolio-1.jpg);
+}
+
+.portfolio-card:nth-child(2){
+    background-image: url(../images/portfolio-2.jpg);
+}
+
+.portfolio-card:nth-child(3){
+    background-image: url(../images/portfolio-3.jpg);
+}
+
+.portfolio-card:nth-child(4){
+    background-image: url(../images/portfolio-4.jpg);
+}
+
+.portfolio-card:nth-child(5){
+    background-image: url(../images/portfolio-5.jpg);
+}
+
+.portfolio-card:nth-child(6){
+    background-image: url(../images/portfolio-6.jpg);
+}
+
