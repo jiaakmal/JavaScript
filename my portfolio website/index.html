@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
 </head>
 <body>
     <!----navbar---->
     <header class="bg-grey">
         <nav class="navbar">
             <div class="logo">JA.</div>
-            <ul class="navlist">
+            <ul class="navlist" id="navlist">
                 <li><a href="#" class="navlinks active">Home</a></li>
                 <li><a href="#" class="navlinks">MyIntro</a></li>
                 <li><a href="#" class="navlinks">Portfolio</a></li>
@@ -20,7 +22,7 @@
                 <li><a href="#" class="navlinks">Testimonial</a></li>
                 <li><a href="" class="primary-btn">Hire Me</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </nav>
@@ -206,19 +208,62 @@
                         <h1>Recent Work</h1>
                     </div>
                     <div class="grid-card-container">
-                        <div class="portfolio-card"></div>
-                        <div class="portfolio-card"></div>
-                        <div class="portfolio-card"></div>
-                        <div class="portfolio-card"></div>
-                        <div class="portfolio-card"></div>
-                        <div class="portfolio-card"></div>
+                        <div class="portfolio-card"><a href="#" class="primary-btn demo">view Product</a></div>
+                        <div class="portfolio-card"><a href="#" class="primary-btn demo">view Product</a></div>
+                        <div class="portfolio-card"><a href="#" class="primary-btn demo">view Product</a></div>
+                        <div class="portfolio-card"><a href="#" class="primary-btn demo">view Product</a></div>
+                        <div class="portfolio-card"><a href="#" class="primary-btn demo">view Product</a></div>
+                        <div class="portfolio-card"><a href="#" class="primary-btn demo">view Product</a></div>
                     </div>
                 </div>
             </div>
          </section>
+      <!-- ------portfolio section ended--- -->
+
+      <!-- -----work together section----- -->
+      <section class="project-section bg-pink">
+        <div class="container">
+            <div class="project-content">
+                <h2 class="fill-white">Let's work together on your next project</h2>
+                <p class="fill-light-pink para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quo mollitia architecto soluta accusantium sint dignissimos labore nesciunt et. Dolores velit blanditiis maxime accusamus totam cum vitae alias soluta omnis.</p>
+                <a href="#" class="primary-btn" data-type="white-btn">Contact</a>
+
+            </div>
+        </div>
+      </section>
+            <!-- -----work together section ended----- -->
+
+            <!-- ----contact us----- -->
+
+      <section class="section bg-white">
+        <div class="container">
+            <div class="col-container">
+                <div class="content">
+                    <h3>Contact Us</h3>
+                    <h1>Get In Touch</h1>
+                </div>
+                
+                    <form action="#" class="form">
+                        <input type="text" placeholder="Username" required>
+                        <input type="text" placeholder="Phone Number" required>
+                        <input type="email" placeholder="E-mail address" required>
+                        <textarea placeholder="Type your message here" rows="5" required></textarea>
+                        <input type="submit" value="Send Mesage" class="primary-btn">
+
+
+                    </form>
+            </div>
+        </div>
+      </section>
     </main>
 
+<!-- ---footer---- -->
+<footer class="footer-section bg-black">
+    <div class="container">
+        <p class="para fill-white">Copyright &copy; 2024 All rights   reserved by JA</p>
+    </div>
 
-    <script src="script.js"></script>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
